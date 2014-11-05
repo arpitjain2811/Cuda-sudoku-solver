@@ -9,7 +9,6 @@
 #include<curand_kernel.h>
 #include <math.h>
 #include <cuda.h>
-#include <cuda_profiler_api.h>
 
 #define NUM_ITERATION 10000
 #define INIT_TEMPERATURE 0.4
@@ -489,7 +488,6 @@ int main(int arg,char* argv[]) {
 
 	int prev_energy=current_energy;
 
-	cudaProfilerStart();
 
 
 
@@ -668,7 +666,6 @@ int main(int arg,char* argv[]) {
 
 	}while(temperature>temp_min);
 
-	cudaProfilerStop();
 
 	cudaMemcpy(sudoku,d_sudoku,size,cudaMemcpyDeviceToHost);
 
