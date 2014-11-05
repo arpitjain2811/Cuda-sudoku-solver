@@ -6,7 +6,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include<curand_kernel.h>
+#include <curand_kernel.h>
 #include <math.h>
 #include <cuda.h>
 
