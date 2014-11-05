@@ -12,7 +12,6 @@
 
 #define NUM_ITERATION 10000
 #define INIT_TEMPERATURE 0.4
-#define NUM_CHAINS 15
 #define MIN_TEMPERATURE 0.001
 #define INIT_TOLERANCE 1
 #define DELTA_T 0.2
@@ -378,11 +377,21 @@ void write_file(int *s)
 int main(int arg,char* argv[]) {
 
 
-	//cudaSetDevice(1);
+	//cudaSetDevice(0);
 	//cudaDeviceSetCacheConfig(cudaFuncCachePreferL1);
+	int device;
+	cudaGetDevice(&device);
+	cudaDeviceProp prop;
+	cudaGetDeviceProperties(&prop,device);
+
 
 	//Tunable Parameter
-	int num_chains=NUM_CHAINS;
+	int num_chains;
+	if(prop.multiProcessorCount>=15)
+		num_chains=15;
+	else
+		num_chains=prop.multiProcessorCount;
+	
 	float temperature=INIT_TEMPERATURE;
 	float temp_min=MIN_TEMPERATURE;
 
