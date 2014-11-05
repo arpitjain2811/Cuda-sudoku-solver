@@ -313,40 +313,6 @@ void init_sudoku(int *s,int *m,char* fname)
 			}
 		}
 
-
-//	int ar[3]={0,3,6};
-//	int temp;
-//
-//
-//	int rand1=random()%3;
-//	int rand2=random()%3;
-//
-//	int r1_x,r1_y,r2_x,r2_y;
-//	int block_x,block_y;
-
-//for(int suf=0;suf<random()%20;suf++)
-//{
-//	block_x = ar[rand1];
-//	block_y = ar[rand2];
-//	do{
-//		r1_x=random()%3;
-//		r1_y=random()%3;;
-//	}while(m[(block_x+r1_x)+9*(block_y+r1_y)]==1);
-//
-//
-//	do{
-//		r2_x=random()%3;;
-//		r2_y=random()%3;;
-//	}while(m[(block_x+r2_x)+9*(block_y+r2_y)]==1);
-//
-//	temp=s[(block_x+r1_x)+9*(block_y+r1_y)];
-//	s[(block_x+r1_x)+9*(block_y+r1_y)]=s[(block_x+r2_x)+9*(block_y+r2_y)];
-//	s[(block_x+r2_x)+9*(block_y+r2_y)]=temp;
-//
-//
-//}
-
-
 }
 
 // This functions returns the count of number of unique elements in a row or column number according to the flag (Host Version)
