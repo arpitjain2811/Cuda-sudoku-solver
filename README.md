@@ -5,7 +5,7 @@ Sudoku is solved using simulated annealing
 
 1. The program accepts a partially completed sudoku grid, where 0 represent an empty spot.
 
-2. all the 9 3x3 sub grids are filled with numbers which are feasible for that grid ie. this random filling will take care of the one of the three constraints of the problem. Thus all the 9 sub grids will have 1-9 exactly once.
+2. All the 9 3x3 sub grids are filled with numbers which are feasible for that grid ie. this random filling will take care of the one of the three constraints of the problem. Thus all the 9 sub grids will have 1-9 exactly once.
 
 3. Next a loop is run until the minimum temperature is achieved.
   1. Select a random sub grid.
